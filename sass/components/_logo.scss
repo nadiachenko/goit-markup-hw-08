@@ -1,0 +1,16 @@
+.logo {
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+   @include font(26px,700,1.19);
+  color: var(--secondary-text-color);
+}
+.logo__link {
+  margin-bottom: 28px;
+  display: block;
+}
+.logo__white {
+  color: var(--third-color);
+}
+.logo__black {
+  color: #000000;
+}

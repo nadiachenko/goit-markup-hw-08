@@ -1,0 +1,36 @@
+@media screen and (min-width:320px) {
+.section-service {
+  display: none;
+  
+}
+}
+@media screen and (min-width:1200px){
+.section-service {
+  display: block;
+  padding-bottom: 94px;
+}
+.service-list {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.service-item {
+  position: relative;
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+  z-index: -1;
+}
+.service-item-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24%;
+  background: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
+  @include font(16px,700,1.14);
+  color: var(--third-color);
+  @include flex;
+  justify-content: center;
+}
+}

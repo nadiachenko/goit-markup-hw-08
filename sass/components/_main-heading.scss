@@ -1,0 +1,17 @@
+
+@media screen and (min-width:320px) {
+.hero-text {
+  @include font(26px,900,1.36);
+  color: var(--third-color);
+  text-transform: uppercase;
+  width: 360px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+}
+@media screen and (min-width:1200px) {
+.hero-text {
+  @include font(44px,900,1.36);
+  width: 696px;
+}
+}
