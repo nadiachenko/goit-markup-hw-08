@@ -57,7 +57,6 @@ img {
 @media screen and (min-width: 320px) {
   .container {
     margin: 0px auto;
-    width: 480px;
   }
 }
 
@@ -69,7 +68,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1600px;
+    width: 1200px;
   }
 }
 
@@ -156,8 +155,15 @@ img {
     line-height: 1.36;
     color: var(--third-color);
     text-transform: uppercase;
+    width: 320px;
     margin: auto;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-text {
+    width: 360px;
   }
 }
 
@@ -403,7 +409,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .header {
-    border: 1px solid #ececec;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
     position: relative;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -602,7 +609,7 @@ img {
             transform: translate(-50%, -50%) scale(0.7);
   }
   .modal {
-    min-width: 530px;
+    width: 100%;
     min-height: 609px;
     background: var(--third-color);
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -741,6 +748,13 @@ img {
   .contact-form-checkbox-wrapper {
     margin-top: 20px;
     margin-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .contact-form-checkbox-label {
     display: -webkit-box;
@@ -749,7 +763,14 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 14px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 11px;
     line-height: 1.71;
   }
   .contact-form-checkbox {
@@ -786,12 +807,13 @@ img {
   .accept-checkbox-link {
     color: var(--secondary-text-color);
     margin-left: 5px;
+    font-size: 10px;
   }
 }
 
 @media screen and (min-width: 480px) {
   .modal {
-    min-width: 528px;
+    width: 528px;
     min-height: 581px;
   }
   .contact-form-description {
@@ -802,6 +824,24 @@ img {
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 12px;
+  }
+  .accept-checkbox-link {
+    font-size: 14px;
+  }
+  .contact-form-checkbox-label {
+    font-size: 14px;
+  }
+  .contact-form-checkbox-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -817,12 +857,16 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: -30px;
     margin-left: -15px;
   }
   .advantages-list {
     margin-left: 15px;
     margin-top: 30px;
+    width: 90%;
   }
   .advantages-item {
     font-size: 14px;
@@ -871,7 +915,9 @@ img {
     margin-top: -30px;
     margin-left: -30px;
   }
-  .advantages-tile {
+  .advantages-list {
+    margin-left: 15px;
+    margin-top: 30px;
     width: 354px;
   }
   .advantages-item {
@@ -892,12 +938,11 @@ img {
     display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    margin-top: -30px;
-    margin-left: -30px;
   }
   .advantages-list {
     -ms-flex-preferred-size: calc((100% - 430px) / 4);
         flex-basis: calc((100% - 430px) / 4);
+    height: 270px;
   }
   .advantages-tile {
     display: -webkit-box;
@@ -971,13 +1016,19 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .team-item {
+    width: 270px;
     margin-top: 30px;
     background: #ffffff;
     border-radius: 0px 0px 4px 4px;
@@ -986,9 +1037,6 @@ img {
   }
   .team-item:first-child {
     margin-top: 0px;
-  }
-  .team-picture {
-    height: 460px;
   }
   .team-text {
     padding: 30px 32px;
@@ -1013,6 +1061,15 @@ img {
 
 @media screen and (min-width: 768px) {
   .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
   }
@@ -1219,7 +1276,6 @@ img {
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: inherit;
-    margin-right: 12px;
     margin-bottom: 20px;
     padding: 15px;
     color: var(--third-color);
@@ -1296,6 +1352,10 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .footer {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
   .footer-rows {
     display: -webkit-box;
     display: -ms-flexbox;

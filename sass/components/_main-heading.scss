@@ -4,11 +4,17 @@
   @include font(26px,900,1.36);
   color: var(--third-color);
   text-transform: uppercase;
-  //width: 360px;
+  width: 320px;
   margin: auto;
   margin-bottom: 30px;
 }
 }
+
+@media screen and (min-width:768px) {
+  .hero-text {
+    width: 360px;
+  }
+  }
 @media screen and (min-width:1200px) {
 .hero-text {
   @include font(44px,900,1.36);

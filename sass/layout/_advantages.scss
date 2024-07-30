@@ -3,13 +3,14 @@
  display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: -30px;
   margin-left: -15px;
  }
 .advantages-list {
   margin-left: 15px;
   margin-top: 30px;
-
+  width: 90%;
 }
 .advantages-item {
   @include font(14px,900,1.14);
@@ -40,9 +41,12 @@
   margin-top: -30px;
   margin-left: -30px;
  }
- .advantages-tile {
-  width: 354px; 
-} 
+ .advantages-list {
+  margin-left: 15px;
+  margin-top: 30px;
+  width: 354px;
+}
+ 
 .advantages-item {
   text-align: left;
 }
@@ -59,11 +63,12 @@
 .advantages {
   display: flex;
   flex-wrap: nowrap;
-  margin-top: -30px;
-  margin-left: -30px;
+ // margin-top: -30px;
+  //margin-left: -30px;
 }
 .advantages-list {
   flex-basis: calc((100% - 430px) / 4);
+  height: 270px;
 }
 .advantages-tile {
   @include flex;
