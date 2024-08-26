@@ -304,6 +304,8 @@ img {
     background-color: transparent;
     border: none;
     padding: 0;
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: var(--forth-text-color);
     line-height: 0;
   }
@@ -337,6 +339,8 @@ img {
     background-color: transparent;
     border: none;
     fill: var(--forth-text-color);
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 0;
   }
   .mobile-menu-close-btn:focus, .mobile-menu-close-btn:hover {
@@ -355,8 +359,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 100%;
   }
   .mobile-nav-list {
@@ -591,10 +596,16 @@ img {
     background-size: cover;
     margin: 0 auto;
   }
+  .hero-text {
+    text-align: center;
+  }
 }
 
-.hero-text {
-  text-align: center;
+@media screen and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 3208px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 3208px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/heromobile@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heromobile@2x.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -606,6 +617,13 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/herotablet@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herotablet@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
@@ -613,6 +631,13 @@ img {
     padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero@2x.jpg);
   }
 }
 
@@ -949,13 +974,13 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .advantages-list {
     -ms-flex-preferred-size: calc((100% - 430px) / 4);
         flex-basis: calc((100% - 430px) / 4);
-    height: 270px;
   }
   .advantages-tile {
     display: -webkit-box;
@@ -1243,7 +1268,7 @@ img {
     display: -ms-flexbox;
     display: flex;
   }
-  .contact-footer-item:not(last-child) {
+  .contact-footer-item:not(:last-child) {
     margin-bottom: 12px;
   }
   .contact-footer {
@@ -1344,13 +1369,13 @@ img {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
   }
   .first-row {
     margin-bottom: 60px;
     margin-right: 165px;
+  }
+  .second-row {
+    margin-top: 10px;
   }
   .address {
     display: inline-block;
@@ -1387,11 +1412,17 @@ img {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   .first-row {
     margin-right: 70px;
     margin-bottom: 0px;
     text-align: left;
+  }
+  .second-row {
+    margin-top: 0px;
   }
   .address {
     text-align: left;
@@ -1402,7 +1433,6 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 60px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

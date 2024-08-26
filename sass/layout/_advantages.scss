@@ -68,12 +68,13 @@
 }
 .advantages {
   display: flex;
-  flex-wrap: nowrap;
+  align-items: flex-start;
+ 
 
 }
 .advantages-list {
   flex-basis: calc((100% - 430px) / 4);
-  height: 270px;
+  
 }
 .advantages-tile {
   @include flex;
